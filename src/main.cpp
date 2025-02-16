@@ -2,10 +2,9 @@
 
 int main(int argc, char *argv[])
 {
-    
-    int getTimeWait = 1000;
+    stdio_init_all();
 
-    LightController lightController = LightController(1, getTimeWait);
+    LightController lightController = LightController(1, 26);
     return 0;
 }
 
