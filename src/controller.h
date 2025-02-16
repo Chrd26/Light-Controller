@@ -5,5 +5,5 @@
 
 class LightController{
 public:
-    LightController(int output, int ADCInput);
+    LightController(int output, int ADCgpio, int ADCInput);
 };

@@ -1,13 +1,13 @@
 #include "controller.h"
 
-LightController::LightController(int output, int ADCInput){
+LightController::LightController(int output, int ADCgpio, int ADCInput){
+
     gpio_init(output);
     gpio_set_dir(output, GPIO_OUT);
 
     adc_init();
-
-    adc_gpio_init(ADCInput);
-    adc_select_input(0);
+    adc_gpio_init(ADCgpio);
+    adc_select_input(ADCInput);
 
     while (true)
     {
